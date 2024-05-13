@@ -1,14 +1,17 @@
 <?php
-// Start session and include configuration
+//include configuration
 include '../includes/config.php';
-session_start();
+include 'header.php';
 
 // Check if user is logged in and has admin role
 if (!isset($_SESSION['user_data']) || $_SESSION['user_data'][2] !== '1') {
     header("location: index.php"); // Redirect to another page
     exit; // Stop further execution
 }
+
 ?>
+
+
 <div class="container">
     <h5 class="mb-2 text-gray-800">Categories</h5>
     <div class="row">
