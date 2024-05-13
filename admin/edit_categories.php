@@ -1,7 +1,7 @@
 <?php
 // Start session and include configuration
 include '../includes/config.php';
-session_start();
+include 'header.php';
 
 // Check if user is logged in and has admin role
 if (!isset($_SESSION['user_data']) || $_SESSION['user_data'][2] !== '1') {
